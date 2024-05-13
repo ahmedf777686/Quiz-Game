@@ -36,9 +36,13 @@ namespace Quiz_Game
 			Console.WriteLine("Please answer the folliwing question :)\n ");
 
 
-			int NumbersQuestion;
+			int NumbersQuestion = 0;
 			do
 			{
+				if (NumbersQuestion > 10)
+				{
+					Console.WriteLine("The number of questions is max 10 ");
+				}
 				Console.Write("How many questions do you want today? ");
 
 			} while (!int.TryParse(Console.ReadLine(), out NumbersQuestion) || NumbersQuestion > 10);
@@ -91,7 +95,7 @@ namespace Quiz_Game
 			Console.ForegroundColor = ConsoleColor.White;
 
 		}
-		private static bool Isanswer(string InswerInput ,string Inswer)
+		private static bool Isanswer(string InswerInput, string Inswer)
 		{
 
 
